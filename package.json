@@ -1,0 +1,26 @@
+{
+  "name": "youtubedownloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "s": "^1.0.0",
+    "ytdl-core": "^4.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camargosproj/jsyoutubeDownloader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camargosproj/jsyoutubeDownloader/issues"
+  },
+  "homepage": "https://github.com/camargosproj/jsyoutubeDownloader#readme"
+}
