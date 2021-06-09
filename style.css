@@ -5,7 +5,8 @@
     font-family: cursive;
 }
 body{
-    background-image: url(images/bg.jpg);
+    /*background-image: url(images/bg.jpg);*/
+    background-color: rgba(12, 8, 8, 0.9);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
@@ -22,7 +23,6 @@ body{
     width: 250px;
 }
 .card{
-    background: rgba(216, 60, 60, 0.5);
     height: 500px;
     width: 600px;
     top: 10%;
