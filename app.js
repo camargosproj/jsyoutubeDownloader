@@ -7,21 +7,8 @@ const app = express();
 app.listen(3000);
 
 app.get('/', (req, res) => {
+    console.log('Server is woking ');
     res.sendFile('./index.html', { root: __dirname});
 });
-/*
-const inputbtn = document.querySelector('.input-btn');
-const input = document.querySelector('.input');
 
-
-
-inputbtn.addEventListener('click', () => {
-    console.log(input.value);
-
-    console.log(input.value);
-
-ytdl(input.value)
-.pipe(fs.createWriteStream('video.mp4'));
-
-});*/
 
