@@ -1,19 +1,19 @@
 {
   "name": "youtubedownloader",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
-    "nodemon": "^2.0.7",
     "s": "^1.0.0",
     "ytdl-core": "^4.8.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,6 @@
   "bugs": {
     "url": "https://github.com/camargosproj/jsyoutubeDownloader/issues"
   },
-  "homepage": "https://github.com/camargosproj/jsyoutubeDownloader#readme"
+  "homepage": "https://github.com/camargosproj/jsyoutubeDownloader#readme",
+  "description": ""
 }
