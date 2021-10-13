@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <title>Youtube Downloader</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="logo"src="images/logo.png">
+            <h1>You<span>Tube</span>Downloader</h1>
+            <input class="input" type="text" placeholder="https://youtube.com/watch?v=B5PN4SRr8gA&list=RDAMVMtumrBqUEIGc">
+            <input class="downloadBtn" type="button" value="Download">
+        </div>      
+    </div>
+    <script>
+        var downloadBtn = document.querySelector(".downloadBtn");
+var input = document.querySelector(".input");
+
+
+downloadBtn.addEventListener("click", () => {
+    console.log(`The URL is: ${input.value}`);
+    getUrl(input.value);
+})
+
+function getUrl(url){
+    window.location.href = `http://localhost:5000/download?URL=${url}`;
+}
+    </script>
+</body>
+</html>
