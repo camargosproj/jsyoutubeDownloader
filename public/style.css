@@ -1,4 +1,4 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -32,6 +32,7 @@ h1{
     padding: 30px;
     color: #fff;
 }
+
 .input{
     width: 400px;
     height: 40px;
@@ -43,6 +44,7 @@ h1{
     font-size: 20px;
     color: #fff;
 }
+
 .input-btn{
     height: 30px;
     width: 100px;
@@ -52,11 +54,50 @@ h1{
     cursor: pointer;    
     font-size: 16px;
     text-transform: uppercase;
-
 }
+
 input[type=button]:hover{
-    color: #f40003;
+    color: #fff;
 }
 span{
     color: #f40003;
+}
+.downloadBtn {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0 0 0;
+    cursor:pointer;
+    -webkit-border-radius:0.4rem;
+    -moz-border-radius:0.4rem;
+    -ms-border-radius:0.4rem;
+    -o-border-radius:0.4rem;
+    border-radius:0.4rem;
+}
+.downloadBtn:hover {
+    background:#f00;
+    color:#fff;
+} */
+body {
+    background: #ffc107 !important;
+}
+
+.shadow-box {
+    box-shadow: 0 0 20px #524f4f;
+}
+
+footer {
+    background: #ffc107;
+    padding: 20px 20px 20px 0;
+    position: relative;
+    margin-top: 20rem;
+}
+
+footer a {
+    color: #6c757d;
+    font-size: 0.8em;
+
+}
+
+footer a:hover {
+    color: #000;
+    text-decoration: none;
 }
