@@ -1,35 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.min.css">
     <title>Youtube Downloader</title>
 </head>
+
 <body>
-    <div class="container">
-        <div class="card">
-            <img class="logo"src="images/logo.png">
-            <h1>You<span>Tube</span>Downloader</h1>
-            <input class="input" type="text" placeholder="https://youtube.com/watch?v=B5PN4SRr8gA&list=RDAMVMtumrBqUEIGc">
-            <input class="downloadBtn" type="button" value="Download">
-        </div>      
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-warning text-dark d-flex shadow-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="container d-flex justify-content-center">
+                            <a href="#" class="navbar-brand img-fluid ml-5"><img src="images/logo.png" width="80"
+                                    alt="logomarca Youtube"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 d-flex align-items-center">
+                        <div class="container d-flex justify-content-center">
+                            <h2 class="text-secondary">YouTube Downloader</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container bg-warning my-5 shadow-box">
+        <div class="row">
+            <div class="container col-sm-12 mt-5">
+                <div class="container col-md-3 d-flex justify-content-center my-5">
+                    <img class="logo" src="images/logo.png" class="img-fluid" width="200" alt="logomarca Youtube">
+                </div>
+                <div class="container col-sm-8 border border-secondary rounded shadow-box mb-5">
+                    <form class="my-4">
+                        <div class="input-group input-group-md">
+                            <input class="input form-control" type="text" placeholder="http://your link here">
+                            <div class="input-group-append">
+                                <button class="downloadBtn btn btn-secondary" type="button"
+                                    value="download">Download</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 d-flex justify-content-center">
+                    <p class="align-self-end">
+                        <a class="" href="#">&copy;2022 - YouTubeDownloader - Todos os direitos
+                            reservados.</a>
+                    </p>
+                </div>
+                <div class="col-sm-4 d-flex justify-content-center">
+                    <p class="align-self-center ">
+                        <a href="#" class="btn btn-outline-secondary ml-2">
+                            <i class="fab fa-instagram"><span class="sr-only">Instagram logomarca</span></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary ml-4 ">
+                            <i class="fab fa-twitter"><span class="sr-only">Twitter logomarca</span></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary ml-4 ">
+                            <i class="fab fa-facebook"><span class="sr-only">Facebook logomarca</span></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
         var downloadBtn = document.querySelector(".downloadBtn");
-var input = document.querySelector(".input");
+        var input = document.querySelector(".input");
+        downloadBtn.addEventListener("click", () => {
+            console.log(`The URL is: ${input.value}`);
+            getUrl(input.value);
+        })
 
-
-downloadBtn.addEventListener("click", () => {
-    console.log(`The URL is: ${input.value}`);
-    getUrl(input.value);
-})
-
-function getUrl(url){
-    window.location.href = `download?URL=${url}`;
-}
+        function getUrl(url) {
+            window.location.href = `download?URL=${url}`;
+        }
     </script>
 </body>
+
 </html>
