@@ -25,15 +25,6 @@ app.get('/', (req, res) => {
     res.render('index', {title : 'Youtube Downloader'});
 });
 
-app.get("/finish", (req, res) => {
-    try {
-        res.render('download', {title : 'Youtube Downloader'});
-    } catch (error) {
-        console.log(error);
-    }
-    console.log("Server is working");
-    res.send("This is a test");
-})
 app.get('/download', async (req,res) => {  
     try{
         let URL = req.query.URL;
