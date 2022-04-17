@@ -1,39 +1,57 @@
-//Requiring all the modules
+//Requiring all modules
 const ytdl = require('ytdl-core');
-
 const express = require('express');
 const morgan = require('morgan');
 const app = express();
-const ejs = require('ejs');
-//app.use(cors());
-//Set midlewhere
+const cors = require('cors');
+
+const PORT = process.env.PORT || 3000;
+
+
+app.use(cors());
 app.use(express.static('public'));
-app.use(morgan('dev')); //Do not forget to check it later 
+app.use(morgan('dev')); //This just logs the request 
 app.use((req, res, next) => {
     res.locals.path = req.path;
     next();
-  });
+});
+
 //Set view Engine
 app.set('view engine', 'ejs');
-var port = 5000
-app.listen(process.env.PORT || port, () => {
-    console.log('Server is working at port ' + port);
-});
+
+// Routes
 app.get('/', (req, res) => {
     console.log('Server is working ');
     res.render('index', {title : 'Youtube Downloader'});
 });
 
-app.get('/download',(req,res) => {  
-    var URL = req.query.URL;
-    console.log(URL);
+app.get("/finish", (req, res) => {
+    try {
+        res.render('download', {title : 'Youtube Downloader'});
+    } catch (error) {
+        console.log(error);
+    }
+    console.log("Server is working");
+    res.send("This is a test");
+})
+app.get('/download', async (req,res) => {  
+    try{
+        let URL = req.query.URL;
+        console.log(URL);    
+        res.header('Content-Disposition', 'attachment; filename="video.mp4"');
+        ytdl(URL, {
+            format: 'mp4'
+            }).pipe(res)
+        }catch(err){
+            console.log("Um error occured");
+        }
+    });
+
+
     
-    res.header('Content-Disposition', 'attachment; filename="video.mp4"');
-    
-    ytdl(URL, {
-        format: 'mp4'
-        }).pipe(res)
+app.listen(PORT, () => {
+    console.log('Server is working at port ' + PORT);
 });
 
-
+    
 

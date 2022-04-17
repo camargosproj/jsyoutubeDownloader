@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-warning text-dark d-flex shadow-box">
+        <nav class="navbar navbar-expand-sm navbar-dark text-dark d-flex shadow-box">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
@@ -32,7 +32,7 @@
             </div>
         </nav>
     </header>
-    <div class="container bg-warning my-5 shadow-box">
+    <div class="container my-5 shadow-box">
         <div class="row">
             <div class="container col-sm-12 mt-5">
                 <div class="container col-md-3 d-flex justify-content-center my-5">
@@ -77,21 +77,7 @@
             </div>
         </div>
     </footer>
-    <script src="/jquery/dist/jquery.min.js"></script>
-    <script src="/popper.js/dist/umd/popper.min.js"></script>
-    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        var downloadBtn = document.querySelector(".downloadBtn");
-        var input = document.querySelector(".input");
-        downloadBtn.addEventListener("click", () => {
-            console.log(`The URL is: ${input.value}`);
-            getUrl(input.value);
-        })
-
-        function getUrl(url) {
-            window.location.href = `download?URL=${url}`;
-        }
-    </script>
+    <script src="/script.js"></script>
 </body>
 
 </html>

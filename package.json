@@ -18,13 +18,13 @@
   },
   "homepage": "https://github.com/camargosproj/jsyoutubeDownloader#readme",
   "dependencies": {
-    "bootstrap": "4.6",
+    "cors": "^2.8.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "jquery": "^3.6.0",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.15",
-    "popper.js": "^1.16.1",
-    "ytdl-core": "^4.10.0"
+    "ytdl-core": "^4.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
