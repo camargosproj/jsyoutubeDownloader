@@ -21,7 +21,7 @@ async function  getUrl(url) {
         let data = await fetch("/download?URL=" + url)
         if(data.status == 200){
             console.log(data);
-            //window.location.href = data.url;
+            window.location.href = data.url;
             alert("Download prontinho! 😁");
         }
     } catch (error) {
