@@ -21,23 +21,20 @@ app.set('view engine', 'ejs');
 
 // Routes
 app.get('/', (req, res) => {
-    console.log('Server is working ');
     res.render('index', {title : 'Youtube Downloader'});
 });
 
 app.get('/download', async (req,res) => {  
     try{
         let URL = req.query.URL;
-        console.log(URL);    
-        res.header('Content-Disposition', 'attachment; filename="video.mp4"');
-        ytdl(URL, {
-            format: 'mp4'
-            }).pipe(res)
+        info = await ytdl.getInfo(URL)
+        let title = info.videoDetails.title
+        res.header('Content-Disposition', `attachment; filename="${title}.mp4"`);
+        ytdl(URL, {format: 'mp4'}).pipe(res);
         }catch(err){
-            console.log("Um error occured");
+            console.log("Ocorreu um erro: ", err);
         }
-    });
-
+});
 
     
 app.listen(PORT, () => {
