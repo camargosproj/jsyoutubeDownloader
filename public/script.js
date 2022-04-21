@@ -23,6 +23,7 @@ async function  getUrl(url) {
             console.log(data);
             window.location.href = data.url;
             alert("Download prontinho! 😁");
+            input.value = "";
         }
     } catch (error) {
         alert("Algo deu errado, Tente mais tarde! 🤬");
